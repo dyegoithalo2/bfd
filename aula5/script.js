@@ -2,7 +2,8 @@ document.addEventListener("DOMContentLoaded", () => {
     let notasAlunos = [
         [7,8,9],
         [5,6,4],
-        [10,9,10]
+        [10,9,10],
+        [8,9,7]
     ];
 
     const tabela = document.querySelector("#tabelaNotas tbody")
@@ -26,6 +27,20 @@ document.addEventListener("DOMContentLoaded", () => {
         let celMedia = document.createElement("td");
         celMedia.textContent = media.toFixed(2);
         linha.appendChild(celMedia);
+
+        
+    
+        let celResultado = document.createElement("td");
+          if (media >= 7){
+            celResultado.textContent = "Aprovado";
+            celResultado.className = "aprovado";
+
+        } else {
+            celResultado.textContent = "Reprovado";
+            celResultado.className = "reprovado";
+        }
+
+        linha.appendChild(celResultado);
 
         tabela.appendChild(linha);
     }
