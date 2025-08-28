@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         let a = Number(A.value);
         let b = Number(B.value);
         
-        if (isNaN(a) || isNaN(b)) {
+        if (isNaN(a) || isNaN(bb)) {
             alert("Digite dois números válidos");
             return;
         }
