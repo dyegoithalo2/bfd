@@ -1,11 +1,23 @@
+const soma = (a,b) => a + b;
+const subtrair = (a,b) => a - b;
+const multiplicar = (a,b) => a * b;
+const dividir(a,b) {return b === 0 ? "divisão por zero!" : a / b;}
+
 document.addEventListener("DOMContentLoaded", () => {
-    const btn = document.getElementById("btnCalcular");
+    const A = document.getElementById("a");
+    const B = document.getElementById("b");
+    const btn = document.getElementById("btnCalc");
+
+    const outSoma = document.getElementById("soma");
+    const outSub = document.getElementById("sub");
+    const outMul = document.getElementById("mul");
+    const outDivi = document.getElementById("divi");
 
     btn.addEventListener("click", () => {
-        let num1 = Number(document.getElementById("num1").value);
-        let num2 = Number(document.getElementById("num2").value);
+        let a = Number(A.value);
+        let b = Number(B.value);
         
-        if (isNaN(num1) || isNaN(num2)) {
+        if (isNaN(a) || isNaN(b)) {
             alert("Digite dois números válidos");
             return;
         }
