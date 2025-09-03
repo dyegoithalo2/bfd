@@ -1,7 +1,28 @@
-const soma = (a, b) => a + b;
-const subtrair = (a, b) => a - b;
-const multiplicar = (a, b) => a * b;
-const dividir = (a, b) => b === 0 ? "Divisão por zero!" : a / b;
+function soma(a, b) {
+  return a + b;
+}
+
+function subtrair(a, b) {
+  return a - b;
+}
+
+function multiplicar(a, b) {
+  return a * b;
+}
+
+function dividir(a, b) {
+  if (b === 0) {
+    return "Divisão por zero!";
+  }
+  return a / b;
+}
+
+function resto(a, b) {
+  if (b === 0) {
+    return "Não aplicável";
+  }
+  return a % b;
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     // Selecionando os elementos de input, botão e saídas do HTML.
@@ -29,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
         outSoma.textContent = soma(a, b);
         outSub.textContent = subtrair(a, b);
         outMul.textContent = multiplicar(a, b);
-        outDivi.textContent = dividir(a, b);
-        outResto.textContent = b !== 0 ? a % b : "Não aplicável";
+        outDivi.textContent = dividir(a, b).toFixed(2);
+        outResto.textContent = resto(a, b);
     });
 });

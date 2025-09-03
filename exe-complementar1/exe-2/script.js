@@ -26,5 +26,4 @@ function Adicionar(){
     menorN.innerHTML = `meu menor número: ${menorNum}`;
     maiorN.innerHTML = `meu maior número: ${maiorNum}`;
 
-    console.log(numeros);
 }
